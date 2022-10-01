@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import { COLORS, WEIGHTS } from '../../constants';
+import { COLORS, WEIGHTS, QUERIES } from '../../constants';
 
 import Icon from '../Icon';
 
@@ -34,8 +34,11 @@ const Select = ({ label, value, children, ...delegated }) => {
 };
 
 const Wrapper = styled.label`
-  display: flex;
-  align-items: baseline;
+  display: none;
+  @media ${QUERIES.tabletAndUp} {
+    display: flex;
+    align-items: baseline;
+  }
 `;
 
 const VisibleLabel = styled.span`

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/macro';
 
-import { WEIGHTS } from '../../constants';
+import { WEIGHTS, QUERIES } from '../../constants';
 
 import Breadcrumbs from '../Breadcrumbs';
 import Select from '../Select';
@@ -28,6 +28,7 @@ const ShoeIndex = ({ sortId, setSortId }) => {
         <ShoeGrid />
       </MainColumn>
       <LeftColumn>
+        <SmallTitle>Running</SmallTitle>
         <Breadcrumbs>
           <Breadcrumbs.Crumb href="/">Home</Breadcrumbs.Crumb>
           <Breadcrumbs.Crumb href="/sale">Sale</Breadcrumbs.Crumb>
@@ -64,8 +65,21 @@ const Header = styled.header`
 `;
 
 const Title = styled.h2`
+  display: none;
+  @media ${QUERIES.laptopAndUp} {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: ${WEIGHTS.medium};
+  }
+`;
+
+const SmallTitle = styled.h2`
+  display: block;
   font-size: 1.5rem;
   font-weight: ${WEIGHTS.medium};
+  @media ${QUERIES.laptopAndUp} {
+    display: none;  
+  }
 `;
 
 export default ShoeIndex;
