@@ -1,3 +1,5 @@
+import { rem } from 'polished'
+
 export const COLORS = {
   white: 'hsl(0deg 0% 100%)',
   gray: {
@@ -16,3 +18,15 @@ export const WEIGHTS = {
   medium: 600,
   bold: 800,
 };
+
+const BREAKPOINTS = {
+  tabletMin: rem('550px'),
+  laptopMin: rem('1100px'),
+  desktopMin: rem('1500px'),
+}
+
+export const QUERIES = {
+  'tabletAndUp': `(min-width: ${BREAKPOINTS.tabletMin})`,
+  'laptopAndUp': `(min-width: ${BREAKPOINTS.laptopMin})`,
+  'desktopAndUp': `(min-width: ${BREAKPOINTS.desktopMin})`,
+}
