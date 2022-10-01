@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components/macro';
-
+import { QUERIES } from '../../constants';
 import { COLORS } from '../../constants';
 
 import SearchInput from '../SearchInput';
@@ -23,8 +23,7 @@ const SuperHeader = () => {
 };
 
 const Wrapper = styled.div`
-  display: flex;
-  align-items: center;
+  display: none;
   gap: 24px;
   font-size: 0.875rem;
   color: ${COLORS.gray[300]};
@@ -32,6 +31,10 @@ const Wrapper = styled.div`
   height: 40px;
   padding-left: 32px;
   padding-right: 32px;
+  @media ${QUERIES.tabletAndUp} {
+    display: flex;
+    align-items: center;
+  }
 `;
 
 const MarketingMessage = styled.span`
