@@ -69,14 +69,14 @@ const Title = styled.h2`
   @media ${QUERIES.laptopAndUp} {
     display: block;
     font-size: 1.5rem;
-    font-weight: ${WEIGHTS.medium};
+    font-weight: var(--font-weight-medium);
   }
 `;
 
 const SmallTitle = styled.h2`
   display: block;
   font-size: 1.5rem;
-  font-weight: ${WEIGHTS.medium};
+  font-weight: var(--font-weight-medium);
   @media ${QUERIES.laptopAndUp} {
     display: none;  
   }
