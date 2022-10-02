@@ -7,6 +7,7 @@ import SuperHeader from '../SuperHeader';
 import MobileMenu from '../MobileMenu';
 import UnstyledButton from '../UnstyledButton';
 import Icon from '../Icon';
+import { rem } from 'polished'
 
 const Header = () => {
   const [showMobileMenu, setShowMobileMenu] = React.useState(false);
@@ -68,10 +69,14 @@ const MainHeader = styled.div`
 
 const Nav = styled.nav`
   display: none;
-  gap: 48px;
   margin: 0px 48px;
   @media ${QUERIES.laptopAndUp} {
+    gap: clamp(1.5rem, -5.357rem + 14.29vw, 7.5rem);
     display: flex;
+    overflow-x: scroll;
+    width: 100%;
+    margin: 0px;
+    margin-left: ${rem('48px')};
   }
 `;
 
